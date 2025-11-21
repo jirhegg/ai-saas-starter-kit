@@ -1,0 +1,25 @@
+project: "Vibe-to-Spec Boilerplate Generator PoC"
+base: nextjs@16
+stack:
+  - supabase
+  - drizzle-orm
+  - shadcn-ui
+  - tanstack-query
+  - tailwindcss
+
+agents:
+  - name: architect
+    goal: Create full architecture from natural language vibe
+  - name: coder
+    goal: Generate production-ready code with tests
+  - name: rag-engineer
+    goal: Add RAG-ready vector store + retrieval endpoints
+
+workflow:
+  - vibe: "쇼핑몰 관리자 대시보드에 소셜 로그인 + 상품 CRUD + AI 기반 상품 검색"
+  - generate: architecture-diagram
+  - generate: db-schema
+  - generate: api-routes
+  - generate: ui-components
+  - generate: rag-context-manager
+  - apply: all
