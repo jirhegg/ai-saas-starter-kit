@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
 import { db } from '@/lib/db';
-import { chat_history, api_usage, user_settings } from '@/drizzle/schema';
+import { chat_history, api_usage, user_settings, chat_sessions } from '@/drizzle/schema';
 import { chatMessageSchema } from '@/lib/validators';
 import { generateChatCompletion } from '@/lib/llm';
 import { ensureUserExists } from '@/lib/auth-helpers';
@@ -31,6 +31,7 @@ export async function POST(request: Request) {
     console.log('[DEBUG] AI Chat - Request body:', body);
     
     const validatedData = chatMessageSchema.parse(body);
+    const sessionId = body.session_id;
 
     let [settings] = await db
       .select()
@@ -52,6 +53,7 @@ export async function POST(request: Request) {
 
     console.log('[DEBUG] AI Chat - Inserting user message to chat_history');
     await db.insert(chat_history).values({
+      session_id: sessionId,
       user_id: user.id,
       document_id: validatedData.document_id,
       role: 'user',
@@ -93,12 +95,39 @@ export async function POST(request: Request) {
     console.log('[DEBUG] AI Chat - Completion result:', { contentLength: result.content.length, tokens: result.tokens });
     
     await db.insert(chat_history).values({
+      session_id: sessionId,
       user_id: user.id,
       document_id: validatedData.document_id,
       role: 'assistant',
       content: result.content,
       tokens_used: result.tokens,
     });
+
+    // 세션 updated_at 갱신 및 첫 메시지면 제목 자동 생성
+    const [session] = await db
+      .select()
+      .from(chat_sessions)
+      .where(eq(chat_sessions.id, sessionId));
+
+    if (session && session.title === '새 대화') {
+      // 첫 메시지를 제목으로 사용 (최대 50자)
+      const autoTitle = validatedData.message.length > 50 
+        ? validatedData.message.substring(0, 50) + '...'
+        : validatedData.message;
+      
+      await db
+        .update(chat_sessions)
+        .set({ 
+          title: autoTitle,
+          updated_at: new Date() 
+        })
+        .where(eq(chat_sessions.id, sessionId));
+    } else {
+      await db
+        .update(chat_sessions)
+        .set({ updated_at: new Date() })
+        .where(eq(chat_sessions.id, sessionId));
+    }
 
     await db.insert(api_usage).values({
       user_id: user.id,

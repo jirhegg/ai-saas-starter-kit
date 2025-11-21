@@ -73,9 +73,23 @@ export const embeddings = pgTable('embeddings', {
   embeddingIdx: index('embeddings_embedding_idx').using('hnsw', table.embedding.op('vector_cosine_ops')),
 }));
 
+// Chat Sessions 테이블
+export const chat_sessions = pgTable('chat_sessions', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  user_id: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
+  title: text('title').notNull().default('새 대화'),
+  created_at: timestamp('created_at').defaultNow().notNull(),
+  updated_at: timestamp('updated_at').defaultNow().notNull(),
+  deleted_at: timestamp('deleted_at'),
+}, (table) => ({
+  userIdIdx: index('chat_sessions_user_id_idx').on(table.user_id),
+  updatedAtIdx: index('chat_sessions_updated_at_idx').on(table.updated_at),
+}));
+
 // Chat History 테이블
 export const chat_history = pgTable('chat_history', {
   id: uuid('id').primaryKey().defaultRandom(),
+  session_id: uuid('session_id').references(() => chat_sessions.id, { onDelete: 'cascade' }).notNull(),
   user_id: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
   document_id: uuid('document_id').references(() => documents.id, { onDelete: 'set null' }),
   role: text('role').notNull(), // user, assistant, system
@@ -83,6 +97,7 @@ export const chat_history = pgTable('chat_history', {
   tokens_used: integer('tokens_used'),
   created_at: timestamp('created_at').defaultNow().notNull(),
 }, (table) => ({
+  sessionIdIdx: index('chat_history_session_id_idx').on(table.session_id),
   userIdIdx: index('chat_history_user_id_idx').on(table.user_id),
   createdAtIdx: index('chat_history_created_at_idx').on(table.created_at),
 }));
@@ -113,6 +128,7 @@ export const usersRelations = relations(users, ({ one, many }) => ({
     references: [user_settings.user_id],
   }),
   documents: many(documents),
+  chatSessions: many(chat_sessions),
   chatHistory: many(chat_history),
   apiUsage: many(api_usage),
 }));
@@ -147,7 +163,19 @@ export const embeddingsRelations = relations(embeddings, ({ one }) => ({
   }),
 }));
 
+export const chatSessionsRelations = relations(chat_sessions, ({ one, many }) => ({
+  user: one(users, {
+    fields: [chat_sessions.user_id],
+    references: [users.id],
+  }),
+  messages: many(chat_history),
+}));
+
 export const chatHistoryRelations = relations(chat_history, ({ one }) => ({
+  session: one(chat_sessions, {
+    fields: [chat_history.session_id],
+    references: [chat_sessions.id],
+  }),
   user: one(users, {
     fields: [chat_history.user_id],
     references: [users.id],
