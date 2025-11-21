@@ -221,6 +221,15 @@ ollama serve
 2. \`npm run db:generate\` 실행
 3. \`npm run db:migrate\` 실행
 
+## 📖 문서
+
+- **[프로젝트 히스토리](docs/PROJECT_HISTORY.md)** - 프로젝트 탄생 배경과 개발 과정
+- **[기술 스택 문서](docs/tech-stack/)** - 각 기술 스택 상세 분석
+- **[배포 가이드](VERCEL_DEPLOY.md)** - Vercel 배포 방법
+- **[변경 로그](CHANGELOG.md)** - 버전별 변경 사항
+- **[기여 가이드](CONTRIBUTING.md)** - 기여 방법
+- **[보안 정책](SECURITY.md)** - 보안 취약점 보고
+
 ## 기여하기
 
 기여는 언제나 환영합니다! [CONTRIBUTING.md](CONTRIBUTING.md)를 참고해주세요.
