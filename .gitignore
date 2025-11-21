@@ -52,6 +52,7 @@ drizzle/migrations/*
 .DS_Store
 Thumbs.db
 
-# Kiro
-.kiro/*
-!.kiro/steering/
+# IDE
+.kiro/
+.vscode/
+.idea/
